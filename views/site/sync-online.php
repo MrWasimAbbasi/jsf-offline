@@ -50,9 +50,10 @@ use yii\web\View;
 
 
 <?php
-
 $js = <<<JS
-    let liveDBURL = 'http://localhost:8000/api';
+    
+    let liveDBURL = 'https://api.jsf.com.pk/public/api';
+    let localURL = 'http://localhost/jsf-offline/web';
     var campaignData=null;
     var donorsData=null;
     $(function (){
@@ -62,7 +63,7 @@ $js = <<<JS
             selectedCampaign=campaign
             $.ajax({
               type: "GET",
-              url: "/site/get-campaign-data",
+              url: localURL + "/site/get-campaign-data",
               data: {
                   campaign_id: campaign
               },

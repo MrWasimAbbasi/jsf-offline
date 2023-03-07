@@ -29,7 +29,7 @@ $donors = \app\models\Donor::find()
             <?= $form->field($model, 'bag_no')->textInput(['maxlength' => true]) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'blood_bag')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'blood_bag')->dropDownList(['single' => 'single', 'double' => 'double', 'triple' => 'triple']) ?>
         </div>
         <div class="col-md-3">
             <?= $form->field($model, 'start_time')->textInput(['maxlength' => true]) ?>

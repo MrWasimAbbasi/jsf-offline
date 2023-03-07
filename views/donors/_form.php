@@ -85,7 +85,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'whatsapp_number')->textInput(['maxlength' => true]) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'donor_type')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'donor_type')->dropDownList(['campaign' => 'campaign']) ?>
         </div>
     </div>
 

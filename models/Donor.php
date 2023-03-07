@@ -65,12 +65,12 @@ class Donor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'father_name', 'dob', 'weight', 'gender', 'address', 'whatsapp_number', 'donor_type'], 'required'],
+            [['name', 'father_name', 'dob', 'weight', 'gender', 'address', 'whatsapp_number', 'donor_type','sr_no'], 'required'],
             [['dob', 'last_date_donation', 'collection_status'], 'string'],
             [['weight'], 'number'],
             [['no_of_donation', 'compaign_id', 'patient_id'], 'integer'],
             [['created_at', 'updated_at', 'deleted_at'], 'safe'],
-            [['reg_no', 'name', 'father_name', 'blood_group', 'class', 'gender', 'cnic', 'address', 'email', 'telephone_number', 'whatsapp_number', 'donor_type', 'sr_no'], 'string', 'max' => 255],
+            [['reg_no', 'name', 'father_name', 'blood_group', 'class', 'gender', 'cnic', 'address', 'email', 'telephone_number', 'whatsapp_number', 'donor_type'], 'string', 'max' => 255],
         ];
     }
 
